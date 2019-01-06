@@ -1,0 +1,9 @@
+部署novel项目需要安装的包：
+用pip3安装：
+pymysql
+django-bootstrap3
+svn （安装超时就先下载下来，下载后解压，执行：python3 setup.py install）
+paramiko
+
+
+然后安装MySQL数据库

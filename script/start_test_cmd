@@ -1,0 +1,18 @@
+#!/usr/bin/expect -f
+set timeout 10
+set ip [lindex $argv 0]
+set user [lindex $argv 1]
+set pwd [lindex $argv 2]
+set p [lindex $argv 3]
+set addr [lindex $argv 4]
+set file [lindex $argv 5]
+spawn ssh $user@$ip;
+expect {
+	"*assword" {send "$pwd\r";}
+	"yes/no" {send "yes\r"; exp_continue;}
+}
+expect "*>*"
+send "$p\r";
+send "cd $addr\r";
+send "python $file\r";
+expect "*>*"

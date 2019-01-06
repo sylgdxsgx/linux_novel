@@ -1,0 +1,29 @@
+<uwsgi>
+	<plugins>python3</plugins>
+	<chdir desc='项目目录'>/opt/proj/novel</chdir>
+	<module desc='项目的application'>novel.wsgi:application</module>
+	<socket desc='socket协议(通过Nginx请求uWSGI来访问Django项目则配置socket)'>uwsgi.sock</socket>
+
+	<!-- <module desc='项目的application'>novel.wsgi</module>
+	<socket>:8099</socket> -->
+
+	<http desc='http协议(直接通过uWSGI来访问Django项目则配置http)'>0.0.0.0:8000</http>
+	<workers desc='进程个数'>2</workers>
+	<!-- <processes>2</processes> -->
+	<pidfile desc='PID路径(完全路径)'>/opt/proj/novel/uwsgi.pid</pidfile>
+	<static-map desc='指定静态文件'>/static=/opt/proj/novel/collected_static</static-map>
+	<uid desc='启动uwsgi的用户名'>root</uid>
+	<gid desc='启动uwsgi的用户组'>root</gid>
+	<master desc='允许主进程存在'>true</master>
+	<vacuum desc='自动移除unix Socket和pid文件当服务停止的时候'>true</vacuum>
+	<thunder-lock desc='序列化接受的内容，如果可能的话'>true</thunder-lock>
+	<enable-threads desc='启用线程'>true</enable-threads>
+	<harakiri desc='设置自中断时间'>1200</harakiri>
+	<post-buffering desc='设置缓冲'>4096</post-buffering>
+	<daemonize desc='日志路径(完全路径)'>/opt/proj/novel/uwsgi.log</daemonize>
+	<profiler>true</profiler>
+	<memory-report>true</memory-report>
+	<logdate>true</logdate>
+	<limit-as>true</limit-as>
+	<uwsgi_read_timeout>600</uwsgi_read_timeout>
+</uwsgi>

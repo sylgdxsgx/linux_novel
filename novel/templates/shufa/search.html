@@ -1,0 +1,13 @@
+
+<div class="cdiv">
+    <form name="shufa" action="raky.asp">
+        <p class="csearch">请输入要查询汉字（可多个）：<input size="20" name="zi" class="cinput" onkeyup="value=value.replace(/[ -~]/g,'')" on-keydown="if(event.keyCode==13)event.keyCode=9" type="text">
+            <input src="/static/shufa/data_files/search.gif" type="image">
+            <input id="s0" type="radio" name="zitype" value="行书" {% if zitype == '行书' %} checked {% endif %} ><label for="s0">&nbsp; 行书 &nbsp;</label>
+            <input id="s1" type="radio" name="zitype" value="楷书" {% if zitype == '楷书' %} checked {% endif %} ><label for="s1">&nbsp; 楷书 &nbsp;</label>
+            <input id="s2" type="radio" name="zitype" value="草书" {% if zitype == '草书' %} checked {% endif %} ><label for="s2">&nbsp; 草书 &nbsp;</label>
+            <input id="s3" type="radio" name="zitype" value="隶书" {% if zitype == '隶书' %} checked {% endif %} ><label for="s3">&nbsp; 隶书 &nbsp;</label>
+            <input id="s4" type="radio" name="zitype" value="篆书" {% if zitype == '篆书' %} checked {% endif %} ><label for="s4">&nbsp; 篆书 &nbsp;</label>
+        </p>
+    </form>
+</div>

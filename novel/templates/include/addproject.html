@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--
+	<script type="text/javascript" src="/static/js/myjsAddproject.js"></script>
+	-->
+	<script>
+		$(document).ready(function(){
+			if("{{new_id}}"!=""){ //先添加到菜单，再配置点击事件，再配置下一步按钮
+				$("#menu_addproject").before("<li id='{{new_id}}' style='font-size:22px;font-weight:600px;cursor:pointer;' type='button' value='{{new_name}}'>&nbsp;&nbsp;&nbsp;{{new_name}}</li>");
+				$("#{{new_id}}").click(function(){
+					pid = "{{new_id}}";
+					var url = "/app02/index/?pid={{new_id}}";
+					var content = document.getElementById("content"); 
+					$("#content").load(url);//?PID=XX没用
+					//window.history.pushState({content:content.load},0,'http://'+host+url);
+				});
+				$("#block3 input").attr('id','machine');	//重置下一步按钮
+			}
+			$("#addproject_btn").click(function(){
+				var name = $("#addproject_name").val();
+				var svn = $("#addproject_svn").val();
+				$("#content").load('/app02/addproject',{'name':name,'svn':svn,'action':'add'});
+				
+			});
+		});
+	</script>
+</head>
+<body>
+	<!--上面的没有加载进去，实际只加载了下面的-->
+    <div style="margin: auto; left: 50%; height: 100%; top: 0px; width: 50%;">
+		<table>
+			<thead>
+				<tr>
+					<th>项目名称</th>
+					<th>SVN路径</th>
+					<th style="min-width:80px;"></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<input id="addproject_name" type="text" name="projectname" /></td>
+					<td>
+						<input id="addproject_svn" type="text" name="svn" /></td>
+					<td>
+						<input id="addproject_btn" type="submit" name="addproject" value="添加" />
+						<span style="color: red;">{{status}}</span></td>
+				</tr>
+				{% for project in proj_list %}
+					<tr>
+						<td><input type="text" id="{{project.id}}_name" name="projectname" value="{{ project.name }}" disabled></td>
+						<td><input type="text" id="{{project.id}}_svn" name="projectsvn"  value="{{ project.svn}}"  disabled></td>
+						<td><input type="submit" id="{{project.id}}_modify" name="modify_project" value="修改" onclick="modify_project(this)" />
+							<input type="submit" id="{{project.id}}_enable" name="enable_project" value="禁用" /></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+		<!--<a href="#" onClick="JavaScript :history.back(1);">返回上一页</a>
+		移除disabled属性：$(xxx).removeAttr("disabled")-->
+		
+    </div>
+</body>
+</html>

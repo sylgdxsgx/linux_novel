@@ -1,0 +1,9 @@
+<div class="cdiv">
+    <span class="bgreen botitle18">“{{zi}}”  &nbsp;-&nbsp; {{zitype}}书法</span>
+    <ul class="oul shuimg">
+        {% for z in url %}
+        <li><a href="{{z.url}}"><img alt="{{z.author}} - {{zitype}} - “{{zi}}”" src="{{z.url}}"></a><br><a title="“{{z.author}}” 书法" >{{z.author}}</a></li>
+        {% endfor %}
+    </ul>
+    <div style="clear:both;"></div>
+</div>

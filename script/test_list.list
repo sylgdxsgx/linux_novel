@@ -1,0 +1,471 @@
+[1521102793472]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521102801572]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521103312902]
+value = [{'http://172.16.7.34:5556/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521103372221]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521103418533]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521107514029]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521107562152]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521107634877]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521107748530]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521107860295]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521107893679]
+value = [{'http://172.16.7.34:5556/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521169270524]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521170634184]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521170850174]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521171384969]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521171476685]
+value = [{'http://172.16.7.34:5556/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521171538210]
+value = [{'http://172.16.7.34:5557/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521171594708]
+value = [{'http://172.16.7.34:5558/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521176241377]
+value = [{'http://172.16.7.34:5555/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521176319172]
+value = [{'http://172.16.7.34:5556/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521176361327]
+value = [{'http://172.16.7.34:5557/wd/hub': [('/home/mpr/work/view.py', 'firefox'), ('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox')]}]
+
+[1521176421003]
+value = [{'http://172.16.7.34:5558/wd/hub': [('/home/mpr/MPR-ISLI-Firefox/Run_My_Test1s.py', 'firefox'), ('/home/mpr/work/view.py', 'firefox')]}]
+
+[1521176733843]
+value = [{'http://172.16.7.34:5559/wd/hub': [('/home/mpr/work/ISLITest/projects/mprtestHome.py', 'firefox'), ('/home/mpr/work/ISLITest/projects/mprtestHome.py', 'firefox')]}]
+
+[1521176795723]
+value = [{'http://172.16.7.34:5560/wd/hub': [('/home/mpr/work/ISLITest/projects/mpr/testHome.py', 'firefox'), ('/home/mpr/work/ISLITest/projects/mpr/testHome.py', 'firefox')]}]
+
+[1521178714697]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521178855592]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521179116527]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521179210820]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521180006390]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521180045325]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521180495337]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521180591865]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521180768074]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521180844388]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521181065496]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521193599313]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521194056925]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521194267772]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521194516059]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521194627643]
+value = [{'http://172.16.7.34:5559/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521194704119]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521195704849]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521195750604]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521195848702]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521272205708]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521272464557]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521272848897]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521273072614]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521273351450]
+value = [{'http://172.16.7.34:5559/wd/hub': [('home/mpr/work/ISLITest/projects/mpr/testHome.py', 'firefox')]}]
+
+[1521273448956]
+value = [{'http://172.16.7.34:5560/wd/hub': [('home/mpr/work/ISLITest/projects/mpr/testHome.py', 'firefox')]}]
+
+[1521274119563]
+value = [{'http://172.16.7.34:5561/wd/hub': [('home/mpr/work/ISLITest/projects/mpr/testHome.py', 'firefox')]}]
+
+[1521274399631]
+value = [{'http://172.16.7.34:5562/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521274454973]
+value = [{'http://172.16.7.34:5563/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521277077590]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521278697622]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521278844591]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521279182269]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521279423017]
+value = [{'http://172.16.7.34:5559/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521280345649]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521280892815]
+value = [{'http://172.16.7.34:5561/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521341721687]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521353775928]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521353892370]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521451926916]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521452229598]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521452777776]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521453756286]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521518846103]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521519176291]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521519690604]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521532418991]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521532573599]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521532639953]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521533037929]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521533110884]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521533342887]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521533540644]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521534069793]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521534286180]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521534355925]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521534640119]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1521534914806]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522057077611]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522057166868]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522120863698]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522121063864]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522121257254]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522121811887]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522122204816]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522123606846]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522123725910]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522125989678]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522126361428]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522127062643]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522129510157]
+value = [{'http://172.16.7.34:5559/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522129599866]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522129862512]
+value = [{'http://172.16.7.34:5561/wd/hub': [('projects/mpr/testHome.py', 'firefox'), ('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522132811529]
+value = [{'http://172.16.7.34:5562/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1522133062031]
+value = [{'http://172.16.7.34:5563/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1522133222734]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1522134091124]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1522137247208]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522139010260]
+value = [{'http://172.16.7.172:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522139184438]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}, {'http://172.16.7.172:5557/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522140230500]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/mpr/testHome.py', 'firefox')]}]
+
+[1522141650358]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523848469126]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523848845666]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523849172108]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523849574332]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523849896564]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523850425449]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523850677702]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1523860990429]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523861130948]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523861519918]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523861989655]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523862065667]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523862821425]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523863375411]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523864185680]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523864295113]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523864394344]
+value = [{'http://172.16.7.34:5559/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523864471553]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523864523852]
+value = [{'http://172.16.7.34:5561/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'firefox')]}]
+
+[1523866333153]
+value = [{'http://172.16.7.34:5562/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'chrome')]}]
+
+[1523866582839]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/Rams_sysmanage.py', 'chrome')]}]
+
+[1523867480084]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/newsManagerTest.py', 'chrome')]}]
+
+[1523868213481]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/Link_Entity.py', 'chrome')]}]
+
+[1523868760133]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/LC_sign.py', 'chrome')]}]
+
+[1523868955992]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/LCsign.py', 'chrome')]}]
+
+[1523869028310]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/LCsign.py', 'chrome')]}]
+
+[1523869113910]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/isli/case/LCsign.py', 'chrome')]}]
+
+[1523869163609]
+value = [{'http://172.16.7.34:5559/wd/hub': [('projects/isli/case/LCsign.py', 'chrome')]}]
+
+[1523869979912]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/isli/case/RAhome.py', 'chrome')]}]
+
+[1523870335944]
+value = [{'http://172.16.7.34:5561/wd/hub': [('projects/isli/case/RAMS_login.py', 'chrome')]}]
+
+[1523870750480]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAMS_system.py', 'chrome')]}]
+
+[1523871128047]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/RASPcheck.py', 'chrome')]}]
+
+[1523871408841]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/RASPmanage.py', 'chrome')]}]
+
+[1523871661079]
+value = [{'http://172.16.7.34:5558/wd/hub': [('projects/isli/case/Search.py', 'chrome')]}]
+
+[1523872005419]
+value = [{'http://172.16.7.34:5559/wd/hub': [('projects/isli/case/ServerModify.py', 'chrome')]}]
+
+[1523872413246]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/isli/case/spRegister.py', 'chrome')]}]
+
+[1523872483066]
+value = [{'http://172.16.7.34:5561/wd/hub': [('projects/isli/case/spRegister.py', 'chrome')]}]
+
+[1524792652118]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1524798725493]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1524818087137]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1524887573507]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1531225511905]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/LCsign.py', 'chrome')]}]
+
+[1531225947814]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1531294826245]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAMS_login.py', 'chrome'), ('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1531296993828]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome'), ('projects/isli/case/RAMS_login.py', 'chrome')]}]
+
+[1531301858087]
+value = [{'http://172.16.7.34:5557/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome'), ('projects/isli/case/RAMS_login.py', 'chrome')]}]
+
+[1531310602211]
+value = [{'http://172.16.7.34:5560/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+
+[1531310706870]
+value = [{'http://172.16.7.172:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'firefox')]}]
+
+[1531310782191]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}, {'http://172.16.7.172:5556/wd/hub': [('projects/isli/case/RAMS_login.py', 'chrome')]}]
+
+[1531311313227]
+value = [{'http://172.16.7.34:5556/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}, {'http://172.16.7.172:5555/wd/hub': [('projects/isli/case/RAMS_login.py', 'firefox')]}]
+
+[1532605423182]
+value = [{'http://172.16.7.34:5555/wd/hub': [('projects/isli/case/RAlogin.py', 'chrome')]}]
+

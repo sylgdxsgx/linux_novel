@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自动化测试集成方案</title>
+	<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/js/getUrlParam.js"></script>
+	<script type="text/javascript" src="/static/js/myjsMaster.js"></script>
+	<script>
+		var username = "admin";
+		var baseurl = window.location.href.split('?')[0];
+		var host = window.location.host;
+		var pathname = window.location.pathname;
+		var test_list = new Array();	//保存测试项id号，含前缀
+		var machine_list = new Array(); //保存执行机(2个元素，第一个是原来的，第二个是更新的)
+		var machine_list_new = new Array();
+		var pid = "0";			//保存当前项目ID
+		var testcase_list = []; //保存当前已经选择好了的测试项，给当前机器用
+		var dictcase_checked = {};//保存已经被选择了的测试项对象，每次弹窗窗口需排除这里的，同时用来设置disabled
+		var obj_machine_test = new Object();
+		if("{{test_list|safe}}"!="null"){	//首次保存测试项
+			test_list = {{test_list|safe}};
+		};
+	</script>
+	{% block css %} {% endblock %}
+    <style>
+		body{
+			display:block;
+			margin:0 auto;/* 外边距0 */
+			padding:0;/* 内边距0 */
+			#font:12px/1.8 '微软雅黑';/*  设置页面的字体大小，行高（没记错的话），字体*/
+			background-color: #f5f5f5;
+			color:black;
+			line-height:1.8;
+			}
+		div{
+			display:block;
+			}
+		ul,ol,li{
+			list-style:none;
+			margin:0;
+			padding:0;
+			display:list-item;
+			text-align:-webkit-match-parent;
+			}
+        .header-wrapper{
+			background:#fff;
+			position:relative;
+			z-index:1001;
+			#width:100%;
+            #background-color: #528fd3;
+			#text-align: center;
+        }
+		.topbar{
+			height:32px;
+			border-bottom:1px solid #ebebeb;}
+		.userbar{
+			position:static;
+			right:0;
+			top:16px;
+			margin-top:6px;
+			font-size:13px;
+			font-family:arial;
+			float:right;
+			}
+		.userbar_set{
+			margin:auto 11px;
+			margin-left:11px;
+			}
+		.header-wrapper .topbar .userbar li{
+			padding:0 11px;
+			position:relative;
+			float:left;
+			}
+		.header-wrapper .header{
+			position:relative;
+			overflow:hidden;
+			}
+		.header-wrapper .header .layout{
+			position:relative;
+			margin:0 auto;
+			width:1139px;
+			overflow:hidden;
+			}
+		.logo-container{
+			background-image:url("/static/img/logo.jpg");
+			float:left;
+			line-height1;
+			padding:25px 0 35px;
+			width:100%;
+			}
+		.logo-container a.logo{
+			margin:0 20px 0 0;
+			outline:0;
+			text-decoration:none;
+			color:#338de6;
+			}
+		.main{
+			width:100%;
+			font-size:14px;
+			color:#333;
+			line-height:1.5;
+			float:left;
+			position:relative;
+			padding:0 0 100px;
+			}
+		.section{
+			clear:both;
+			margin:0 auto;
+			width:1210px;
+			}
+		#block1{
+			}
+		#block2{
+			}
+		#block3{
+			}
+		.section .padding_left_for_nav{
+			#padding-left:280px;
+			}
+		.section .container{
+			padding:30px 0px;
+			position:relative;
+			}
+		.left_navber_wrap{
+			display:block;
+			background:linear-gradient(145deg,#0077c9,#02d8cb);
+			position:fixed;
+			width:240px;
+			margin-left:-300px;
+			z-index:500;
+			}
+		.backward_navber_wrap{
+			display:block;
+			background:linear-gradient(145deg,#0077c9,#02d8cb);
+			position:fixed;
+			margin-left:-160px;
+			z-index:500;
+			height:70px;
+			}
+		.backward_navber_wrap button{
+			font-size:24px;
+			cursor:pointer;
+			border-width:0px;
+			border-style:solid;
+			border-color:none;
+			position:relative;
+			height:70px;
+			width:100px;
+			margin:auto;
+			background-image: url(/static/img/backward.png);
+			background-color: transparent;
+		}
+		.backward_navber_wrap button:hover{
+			#background-color:#ddffdd;
+			border-width:2px;
+			border-color:beige;
+			
+		}
+		.forward_navber_wrap{
+			display:block;
+			background:linear-gradient(145deg,#0077c9,#02d8cb);
+			position:fixed;
+			z-index:500;
+			height:70px;
+			}
+		.forward_navber_wrap button{
+			font-size:20px;
+			cursor:pointer;
+			border-width:0px;
+			border-style:solid;
+			border-color:none;
+			position:relative;
+			height:70px;
+			width:100px;
+			margin:auto;
+			background-image: url(/static/img/forward.png);
+			background-color: transparent;
+			
+		}
+		.forward_navber_wrap button:hover{
+			#background-color:#ddffdd;
+			border-width:2px;
+			border-color:beige;
+			font-size:18px;
+			font-size-adjust
+			
+		}
+		
+		.left_navber_wrap li:hover{
+			background-color:#ddffdd;
+			}
+		.left_navber_wrap a:hover{
+			color:#51b1dd;
+			}
+			
+		.feature_box{
+			#width:calc(100% - 20px);
+			overflow:hidden;
+			box-shadow:-2px 0 8px #eaeaea,0 -2px 8px #eaeaea,0 2px 8px #eaeaea,2px 0 8px #eaeaea;
+			padding:30px 40px 50px 40px;
+			position:relative;
+			margin:0 auto;
+			min-height:100px;
+			background:#fafbfc;
+			}
+		.intre_title{
+			width:10%;
+			position:relative;
+			color:#666;
+			font-size:20px;
+			font-weight:600;
+			line-height:3rem;
+			}
+		.intre_table{
+			float:left;
+			background-color: #f8f9fc;
+			border: 1px solid #cdced0;
+			position: relative;
+			min-height:100px;
+			min-width:125px;
+			}
+
+        .content{
+            background-color: white;
+			min-height:360px;
+			margin:auto;
+        }
+		.selected{
+			#float: left;
+			#margin:auto;
+			#width:99%;
+			#position:relative;
+			#padding:20px 20px;
+			background-color:white;
+			min-height:100px;
+			margin:auto;
+		}
+		.pub_fo{
+			float:left;
+			height:70px;
+			width:100%;
+			position:fixed;
+			}
+
+		.content .addbutton{
+			cursor:pointer;
+			margin: auto;
+			position: relative;
+			height: 32px;
+			width: 32px;
+			background-image: url(/static/img/add.jpg);
+			padding: 6px;
+			border-style: unset;
+		}
+		.colsebutton{
+			cursor:pointer;
+			margin: auto;
+			position: relative;
+			height: 32px;
+			width: 32px;
+			background-image: url(/static/img/delete.jpg);
+			padding: 6px;
+			border-style: unset;
+		}
+		a{
+			text-decoration:none
+		}
+		.selected button{
+			text-align:center;
+			margin:auto;
+			position:relative;
+			width:100%;
+		}
+		.buttondiv{
+		    padding: 10px;
+			width: 105px;
+			height: 75px;
+			margin: auto;
+		}
+		.unchecked{
+			padding: 1px 6px;
+			width: 100%;
+			height: 100%;
+			align-items: flex-start;
+			cursor: pointer;
+			color: buttontext;
+			background-color: buttonface;
+			box-sizing: border-box;
+			border-width: 3px;
+			border-style: solid;
+			border-color: lightsalmon;
+			border-image: initial;
+		}
+		.checked{
+		    padding: 1px 6px;
+			width: 100%;
+			height: 100%;
+			align-items: flex-start;
+			cursor: pointer;
+			color: buttontext;
+			background-color: buttonface;
+			box-sizing: border-box;
+			border-width: 4px;
+			border-style: dashed;
+			border-color: royalblue;
+			border-image: initial; 
+		}
+		.checked_ok{
+		    padding: 1px 6px;
+			width: 100%;
+			height: 100%;
+			align-items: flex-start;
+			cursor: pointer;
+			color: buttontext;
+			background-color: buttonface;
+			box-sizing: border-box;
+			border-width: 2px;
+			border-style: solid;
+			border-color: lightgray;
+			border-image: initial; 
+		}
+		.black_overlay{ 
+            display: none; 
+            position: absolute; 
+            top: 0%; 
+            left: 0%; 
+            width: 100%; 
+            background-color: black; 
+            z-index:1001; 
+            -moz-opacity: 0.8; 
+            opacity:.80; 
+            filter: alpha(opacity=88); 
+        } 
+        .white_content { 
+            display: none; 
+            position: absolute; 
+            top: 25%; 
+            left: 25%; 
+            width: 55%; 
+            padding: 1px; 
+            border: 10px solid orange; 
+            background-color: white; 
+            z-index:1002; 
+            overflow: initial; 
+        } 
+    </style>
+
+
+</head>
+<body >
+    <div class="header-wrapper">
+		<div class="topbar">
+			<ul class="userbar">
+				<li class="userbar_set">
+					<a id='set' style="cursor:pointer;">设置</a></li>
+				<li class="userbar_out">
+					<a href="/app02/logout" nslog="normal" nslog-type="10080112">退出</a></li>
+			</ul>
+		</div>
+		<div class="header">
+			<div class="layout">
+				<div class="logo-container">
+					<h1 style="position: relative;width: 26%;margin: auto;">分布式自动化测试</h1>
+					<div>
+						<a class="logo" href="/app02/123/">
+							<span>
+
+							</span>
+						</a>
+					</div>
+				</div>
+				<div style="float:left;background: #f5f5f5;padding-bottom: 3px;padding-top: 3px;">
+					<div style="background: #f9f4d9;color:#8f7f5d;position:relative;padding: 4px 10px;font-size: 12px;">声明：集成测试环境，开发阶段。
+					</div>
+				</div>
+			</div>
+			<div style="background: #9f62ed;width: 100%;height: 5px;position: relative;top: 3px;margin: auto;float: left;"></div>
+		</div>
+	</div>
+	<div class="main">
+		<div class="section" id="block1">
+			<div class="padding_left_for_nav">
+				<div class="left_navber_wrap">
+					{% block menu %} {% endblock %}
+				</div>
+			</div>
+		</div>
+		<div class="section" id="block2">
+			<div class="container padding_left_for_nav">
+				<div class="content feature_box" id="content">
+					{% for line in proj_info %}
+						<div style="width: 50%; margin: auto; height: 30%; top: 50px; left: 50px;">
+							<a style="color: blue; font-size: 14px; text-align: center; line-height: 100px;">{{line}}</a>
+						</div>
+					{% endfor %}
+			</div>
+			</div>
+		</div>
+		<div class="section" id="block3">
+			<div class="container padding_left_for_nav">
+				<div class="selected feature_box" style="min-height:100px;">
+						{% block selected %} {% endblock %}
+				</div>
+			</div>
+		</div>
+		<div class="section" id="block4">
+			<div class="padding_left_for_nav">
+				<div class="backward_navber_wrap">
+					<button id="backward" value="backword"></button>
+				</div>
+				<div class="forward_navber_wrap">
+					<button id="forward" value="forward"></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="pub_fo" style="background:#dadada">
+		<p style="width: 1130px;text-align:center;margin: auto;position: relative;top: 15px;">Copyright© 2007-2017 深圳市天朗时代科技有限公司 版权所有. 粤ICP备07072413号... <span style="color: blue; font-size: 22px;">嘻 嘻</span>，开 玩 笑 啦<span style="font-size:24px;color:#F00;"> 	㋡</span></p></div>
+	<div id="machinepopup" class="white_content">
+		<!--
+		<button class="colsebutton" style="float:right;top:-20px;right:-20px;cursor:pointer;" onclick = "document.getElementById('machinepopup').style.display='none';document.getElementById('fade').style.display='none'">
+		</button>
+		-->
+		<div style="background: #f5f5f5;position:relative;">
+			<div style="background: #f9f4d9;color:#8f7f5d;position:relative;padding: 4px 10px;font-size: 12px;">备注：蓝色虚线框表示选中该项。
+			</div>
+		</div>
+		<div  style="min-height: 100px;overflow:hidden;" id="pop-table"></div>
+		<hr style="height: 0px;width:100%;border: none;border-top: 1px inset #f7fafd;"/>
+		<div style="width: 100%;margin:auto;overflow:hidden;position:relative;background-color: #f5f5f5;top: -3px;">
+			<button btn="ok" id="btnok" style="float:right;cursor:pointer;" >确定</button>
+		</div>
+	</div> 
+    <div id="fade" class="black_overlay"></div> 
+</body>
+</html>

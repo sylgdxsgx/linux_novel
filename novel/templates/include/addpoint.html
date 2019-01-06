@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		$(document).ready(function(){
+			$("#addpoint_btn").click(function(){
+				var url = "/app02/addpoint"
+				var name = $("#addpoint_name").val();
+				var svn = $("#addpoint_svn").val();
+				var main = $("#addpoint_main").val();
+				var Type = $(this).attr('name');
+				//pid = "{{pid}}";
+				var mid = "{{mid}}";
+				$("#content").load(url,{'name':name,'svn':svn,'main':main,'action':'add','Type':Type,'pid':pid,'mid':mid});
+			});
+		});
+	</script>
+</head>
+<body>
+	<!--上面的没有加载进去，实际只加载了下面的-->
+    <div style="margin: auto; left: 50%; height: 100%; top: 0px; width: 55%;">
+		<table>
+			<thead>
+				<tr>
+					<th>{% if action == "addmodular" %} 模块{%else%}模块{% endif %}</th>
+					<th>SVN文件</th>
+					<th>主文件</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td style="vertical-align:top;"><input id="addpoint_name" type="text" /></td>
+					<td><textarea id="addpoint_svn" type="text" rows="1" wrap="hard" onkeyup="this.style.height=this.scrollHeight-4+'px'" ></textarea></td>
+					<td style="vertical-align:top;"><input id="addpoint_main" type="text" /></td>
+					<td style="vertical-align:top;"><input id="addpoint_btn" type="submit" value="添加" name="{{Type}}" modeid="{{mid}}" />
+						<span style="color: red;">{{status}}</span></td>
+				</tr>
+				{% if Type == "modular" %}
+					{% for modular in mode_list %}
+					<tr>
+						<td style="vertical-align:top;"><input type="text" id="m{{ modular.id}}_name" value="{{ modular.name }}" disabled /></td>
+						<td><textarea type="text" id="m{{ modular.id}}_svn" value="{{ modular.svn}}" wrap="hard" onkeyup="this.style.height=this.scrollHeight-4+'px'" disabled >{{ modular.svn}}</textarea></td>
+						<td style="vertical-align:top;"><input id="m{{ modular.id}}_main" type="text" value="{{ modular.main }}" disabled /></td>
+						<td style="vertical-align:top;"><input type="submit" id="m{{ modular.id}}_modify" name="modify_point" value="修改" onclick="modify_point(this)" />
+							<input type="submit" id="m{{ modular.id}}_enable" name="enable_point" value="禁用" /></td>
+					</tr>
+					{% endfor %}
+				{% else %}
+					{% for point in point_list %}
+					<tr>
+						<td style="vertical-align:top;"><input type="text" id="p{{point.id}}_name" value="{{ point.name }}" disabled /></td>
+						<td><textarea type="text" id="p{{point.id}}_svn" value="{{ point.svn}}" wrap="hard" onkeyup="this.style.height=this.scrollHeight-4+'px'" disabled >{{ point.svn}}</textarea></td>
+						<td style="vertical-align:top;"><input id="p{{ point.id}}_main" type="text" value="{{ point.main }}" disabled /></td>
+						<td style="vertical-align:top;"><input type="submit" id="p{{point.id}}_modify" name="modify_point" value="修改" onclick="modify_point(this)" />
+							<input type="submit" id="p{{point.id}}_enable" name="enable_point" value="禁用" /></td>
+					</tr>
+					{% endfor %}
+				{% endif %}
+			</tbody>
+		</table>
+		<!--
+		<a href="#" onClick="JavaScript :history.back(1);">返回上一页</a>
+		-->
+    </div>
+</body>
+</html>

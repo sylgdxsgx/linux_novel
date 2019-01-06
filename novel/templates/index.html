@@ -1,0 +1,21 @@
+{% extends 'master/master_templates.html' %}
+
+{% block menu %}
+	<ol>
+	{% for line in proj_list %}
+		<li id="{{line.id}}" style="font-size:22px;font-weight:600px;cursor:pointer;" type="button" value="{{line.name}}">
+		&nbsp;&nbsp;&nbsp;{{line.name}}
+		</li>
+	{% endfor %}
+	<li id="menu_addproject" style="font-size:22px;font-weight:600px;cursor:pointer;color:blue;" type="button">&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]</li>
+	</ol>
+{% endblock %}
+
+
+
+{% block selected %}
+	<div>
+		<label class="intre_title" >测 试 项</label>
+	</div>
+	<div id ="selected-test" class="intre_table"></div>
+{% endblock %}

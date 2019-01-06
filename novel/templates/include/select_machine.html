@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+	<script type="text/javascript" src="/static/js/myjsSelectMachine.js"></script>
+	-->
+	<script>
+		$(document).ready(function(){
+			if('{{save_machine_arr|safe}}' != 'None'){
+				var temp_machine = new Array();
+				temp_machine = {{save_machine_arr|safe}};//貌似可以不用machine_list,去掉
+				machine_list = temp_machine;
+				machine_list_new = [];	//先清空new
+				$.each(machine_list,function(n,value){//更新列表new
+					machine_list_new.push(value);
+				});
+			}
+			//alert("ready中:[0]:"+machine_list+" [1]:"+machine_list_new);
+			$("table tbody tr").each(function(i,domi){	//每次更新都要添加数据进来
+				var cid = $(this).find("button").attr('id');
+				if(cid != 'filtermachine'){
+					var temp_add_obj = $(this).children().eq(1).find("button").parent();	//获取到添加按钮
+					$.each(dictcase_checked,function(name,value){
+						if(name == cid){
+							$.each(dictcase_checked[name],function(n,value){
+								$(temp_add_obj).before(value);
+							});
+						}
+					});
+				}
+			});
+			
+		});
+	</script>
+</head>
+<body>
+<div style="float:left;background: #f5f5f5;padding-bottom: 3px;padding-top: 3px;position:relative;bottom:10px;">
+	<div style="background: #f9f4d9;color:#8f7f5d;position:relative;padding: 4px 10px;font-size: 12px;">备注：可以选择多台执行机，以及为每台执行机分配不同的测试项。
+	</div>
+</div>
+<table style="width:99%;padding:5px;" border="1" cellspacing="0">
+	<thead>
+		<tr>
+			<th style="width:120px;height:40px;font-size:20px;">执行机</th>
+			<th style="height:40px;font-size:20px;">测试项</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for machine in save_machine_list %}
+		<tr>
+			<td>{% include 'include/machine.html' %}</td>
+			<td>{% include 'include/add_machine_test.html' %}</td>
+		</tr>
+		{% endfor %}
+		<tr>
+			<td>{% include 'include/add_machine.html' %}</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

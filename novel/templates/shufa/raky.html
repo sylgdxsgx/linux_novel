@@ -1,0 +1,10 @@
+{% extends 'shufa/master_templates.html' %}
+
+
+{% block result %}
+	{% include "shufa/search.html" %}
+	{% include "shufa/zi_all.html" %}
+	<div id="content">
+		{% include "shufa/zi_show.html" %}
+	</div>
+{% endblock %}

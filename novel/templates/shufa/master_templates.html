@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//WAPFORUM//DTD XHTML Mobile 1.0//EN" "http://www.wapforum.org/DTD/xhtml-mobile10.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+    <head>
+        <script src="/static/shufa/data_files/push.js"></script>
+        <script async="" src="/static/shufa/data_files/adsbygoogle.js"></script>
+        <script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-3118933189526443",enable_page_level_ads:true});</script>
+        <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-siteapp"> 
+        <title>书法字典查询</title>
+        <meta name="description" content="去,书法,字帖,篆书,草书,行书,楷书,隶书,古代,碑文,书法家,字典,查询">
+        <meta name="keywords" content="去,书法,字帖,篆书,草书,行书,楷书,隶书,古代,碑文,书法家,字典,查询">
+        <link rel="icon" href="https://www.supfree.net/favicon.ico" type="image/x-icon">
+        <script src="/static/shufa/data_files/jquery.js"></script>
+        <script src="/static/shufa/data_files/bootstrap.js"></script>
+        <script>if(top.location!=location){top.location.href= location.href;}</script>
+        <link rel="stylesheet" href="/static/shufa/data_files/bootstrap.css">
+        <link rel="stylesheet" href="/static/shufa/data_files/mstyle.css">
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".sdiv").click(function(){
+                    var zi = $(this).attr("zi");
+                    var zitype = $(this).attr('zitype');
+                    var url = "raky.asp?zi="+zi+"&zitype="+zitype+"&flag=1";   //flag=1表示点击的sdiv
+                    $("#content").load(url)
+                    $(".sdiv").css("color","#333");
+                    $(this).css("color","#5237dc");
+                });
+                $(".csearch input").click(function(){
+                    if($(this).attr("type")=="radio"){
+                        $(".sdiv").attr("zitype",$(this).attr("value"));
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body class="custom-background">
+        <div style="display:none;">
+            <script src="https://s23.cnzz.com/z_stat.php?id=857915&web_id=857915"></script>
+            <script src="https://s23.cnzz.com/z_stat.php?id=857915&web_id=857915"></script>
+        </div>
+
+        <div id="wrapper">
+            <div id="header">
+                <h1>
+                    <a href="https://m.supfree.net/">
+                        <span class="blog-name">
+                            在线查询网-手机版
+                        </span>
+                        <span class="blog-title">
+                        </span>
+                    </a>
+                </h1>
+            </div>
+            <ol class="breadcrumb" id="breadnav">
+              <li><a title="返回首页" href="https://m.supfree.net/">在线查询网</a></li>
+              <li><a href="https://shufa.m.supfree.net/">书法字典查询</a></li>
+              <li class="active">多词查询</li>
+              <li><a href="database">数据库</a></li>
+            </ol>
+            <div id="main">
+                <style>
+                    .shuimg img{height:100px;width:100px;background-image:url("/static/shufa/data_files/bg.jpg");border:1px solid #999999;cursor:pointer;}
+                    .shuimg li{height:130px;text-align:center;}
+                    .wenk a{padding:1px;width:32px;height:32px;line-height:32px;border:1px solid #999999;margin:0 0 5px 5px;font-size:20px;display:block;text-align:center;float:left;}
+                </style>
+                
+                {% block result %} {% endblock %}
+
+                
+            <!-- <div class="navigation">
+                <script language="javascript" src="/static/shufa/data_files/mdwdw.js"> </script>
+            </div> -->
+
+            <!-- <div class="footer_content">
+                <a class="bblue" >电脑版</a> | 手机版
+            </div> -->
+        </div>
+    </body>
+</html>
+<!-- <div>
+    <script src="/static/shufa/data_files/1726717.js"></script>
+    <script src="/static/shufa/data_files/stats"></script>
+</div> -->

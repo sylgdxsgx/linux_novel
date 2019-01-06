@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <!--指定告诉ID用高版本的解析-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <!-- Bootstrap -->
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/static/plugins/bootstrap-3.3.4-dist/css/bootstrap.min.css">
+	<style>
+        .header{
+            height: 60px;
+            background-color: #417690;
+			text-align: center;
+        }
+        .body{
+            background-color: #f8f8f8;
+			height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header"><h1>分布式自动化测试</h1></div>
+    <div class="body">
+		<div style="width: 25%; height: 25%; margin: auto; position: relative; top: 10%;">
+			<div style="left: 100px; width: 50%; position: relative;">
+				<form method='post' enctype="multipart/form-data">
+					{{ userform.as_p }}
+					<span style="color: red; font-size: 12px;">{{message}}</span>
+					<input type='submit' value='提交'/>
+					<a href="/app02/login" nslog="normal" nslog-type="10080112">返回登入</a>
+				</form>
+			</div>
+		</div>
+	<!--{% block js %} {% endblock %}-->
+	</div>
+  <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+  <script src="/static/js/jquery-2.2.1.min.js"></script>
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="/static/plugins/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+</body>
+</html>

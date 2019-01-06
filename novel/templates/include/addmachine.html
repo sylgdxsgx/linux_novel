@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script>
+		$(document).ready(function(){
+			$("#add_machine_btn").click(function(){
+				var url = "/app02/addmachine"
+				var name = $("#addmachine_name").val();
+				var ip = $("#addmachine_ip").val();
+				var password = $("#addmachine_pwd").val();
+				$("#content").load(url,{'name':name,'ip':ip,'password':password,'action':'add'});
+			});
+		});
+	</script>
+</head>
+<body>
+	<div style="float:right;cursor:pointer;" onclick="back()">返回</div>
+    <div style="margin: auto; left: 50%; height: 100%; top: 0px; width: 60%;">
+		<table>
+			<thead>
+				<tr>
+					<th>机器名称</th>
+					<th>IP</th>
+					<th>密码</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><input type="text" id="addmachine_name" placeholder="Account name" /></td>
+					<td><input type="text" id="addmachine_ip" placeholder="127.0.0.1"/></td>
+					<td><input type="password" id="addmachine_pwd" placeholder="Password" /></td>
+					<td><input type="submit" id="add_machine_btn" value="添加" name="{{Type}}" />
+						<span style="color: red;">{{status}}</span></td>
+				</tr>
+				{% for machine in machine_list %}
+					<tr>
+						<td><input type="text" id="c{{machine.id}}_name" value="{{ machine.name }}" disabled /></td>
+						<td><input type="text" id="c{{machine.id}}_ip" value="{{ machine.ip }}" disabled /></td>
+						<td><input type="password" id="c{{machine.id}}_pwd" value="{{ machine.password }}" disabled /></td>
+						<td><input type="submit" id="c{{machine.id}}_modify" name="modify_machine" value="修改" onclick="modify_machine(this)" />
+							<input type="submit" id="c{{machine.id}}_enable" name="enable_machine" value="禁用" /></td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+    </div>
+</body>
+</html>
